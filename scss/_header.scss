@@ -1,0 +1,69 @@
+body {
+    background: #eee;
+}
+
+.wrapper {
+    box-shadow: 0 0 5px #888;
+    background: #fff;
+}
+
+header {
+    a#logo img {
+
+    }
+
+    form#search {
+        position: relative;
+        margin-right: 0;
+        margin-top: 30px;
+
+        input#go {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 11px;
+            cursor: pointer;
+        }
+    }
+
+    @include breakpoint(medium up) {
+        a#logo img {
+            margin: 25px 10px 25px 10px;
+            width: 306px;
+            height: 55px;
+        }
+
+        form#search {
+            clear: right;
+            float: right;
+
+            input#go {
+
+            }
+        }
+    }
+
+    @include breakpoint(small only) {
+        a#logo img {
+            margin: 25px 30px 0 30px;
+        }
+
+        form#search {
+            position: relative;
+            margin-right: 0;
+            margin-top: 30px;
+
+            input#go {
+
+            }
+        }
+    }
+}
+
+ul.menu {
+    background: #eee;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+    margin: 0;
+}
