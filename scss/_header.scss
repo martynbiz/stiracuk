@@ -8,16 +8,10 @@ body {
 }
 
 header {
-    a#logo img {
-
-    }
-
-    form#search {
+    form.search {
         position: relative;
-        margin-right: 0;
-        margin-top: 30px;
 
-        input#go {
+        input.go {
             position: absolute;
             top: 0;
             right: 0;
@@ -27,35 +21,28 @@ header {
     }
 
     @include breakpoint(medium up) {
-        a#logo img {
+        a.logo img {
             margin: 25px 10px 25px 10px;
             width: 306px;
             height: 55px;
         }
 
-        form#search {
-            clear: right;
+        form.search {
             float: right;
-
-            input#go {
-
-            }
+            margin-right: 0;
+            margin-top: 30px;
         }
     }
 
     @include breakpoint(small only) {
-        a#logo img {
+        a.logo img {
             margin: 25px 30px 0 30px;
+            margin-top: 30px;
         }
 
-        form#search {
-            position: relative;
+        form.search {
             margin-right: 0;
             margin-top: 30px;
-
-            input#go {
-
-            }
         }
     }
 }
