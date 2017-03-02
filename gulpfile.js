@@ -11,10 +11,10 @@ gulp.task('sass', function () {
     var sassPaths = [
         'bower_components/foundation-sites/scss',
         'bower_components/motion-ui/src',
-        'scss'
+        'src/scss'
     ];
 
-    return gulp.src('scss/app.scss')
+    return gulp.src('src/scss/app.scss')
         .pipe(sass({
             includePaths: sassPaths,
             outputStyle: 'compressed' // if css compressed **file size**
@@ -31,7 +31,7 @@ gulp.task('scripts', function() {
         'bower_components/jquery/dist/jquery.js',
         'bower_components/what-input/dist/what-input.js',
         'bower_components/foundation-sites/dist/js/foundation.js',
-        'js/app.js'
+        'src/js/app.js'
     ];
 
     return gulp.src(scripts)
@@ -48,7 +48,7 @@ gulp.task('default', function() {
 
 // Run with 'gulp watch'
 gulp.task('watch', function () {
-    watch(['scss/**/*.scss', 'js/**/*.js'], function (event) {
+    watch(['src/scss/**/*.scss', 'src/js/**/*.js'], function (event) {
         gulp.start('sass');
         gulp.start('scripts');
     });
