@@ -1,0 +1,47 @@
+!!! 5
+%html.no-js(lang="en")
+  %head
+    %meta(content="text/html; charset=UTF-8" http-equiv="Content-Type")/
+    %meta(charset="utf-8")/
+    %meta(content="ie=edge" http-equiv="x-ua-compatible")/
+    %meta(content="width=device-width, initial-scale=1.0" name="viewport")/
+    %title Foundation for Sites
+    %link(href="dist/css/app.css" rel="stylesheet")/
+  %body
+    .row.wrapper
+      %header.small-12.columns
+        %a.logo(href="/")
+          %img(alt="Stirling University 50th anniversary logo" src="http://www.stir.ac.uk/media/wwwstiracuk/styleassets/images/majabrand/50th-Anniversary-Green-logo.svg")/
+        %form.search(action="http://www.stir.ac.uk/s/search.html" name="search")
+          %input#q.ui-autocomplete-input(aria-autocomplete="list" aria-haspopup="true" autocomplete="on" name="query" placeholder="Search" role="textbox" type="text")/
+          %input(name="collection" type="hidden" value="stirling")/
+          %input.go(alt="Go" name="go" src="http://www.stir.ac.uk/media/wwwstiracuk/styleassets/images/xsearch-small.png.pagespeed.ic.U3kmkNWpv6.webp" title="Search the University website" type="image")/
+        .show-for-small-only
+          %nav.small-12.columns
+            %a.toggle(href="#" ontouchstart="") ☰ Sections
+            %ul.nav
+              %li.home(title="Study")
+                %a(href="#") Study
+              %li.study(title="Research")
+                %a(href="#") Research
+              %li.international(title="About us")
+                %a(href="#") About us
+              %li.campus(title="Connect")
+                %a(href="#") Connect
+      %nav
+        %ul.small-12.columns.hide-for-small-only.menu
+          %li.home(title="Study")
+            %a(href="#") Study
+          %li.study(title="Research")
+            %a(href="#") Research
+          %li.international(title="About us")
+            %a(href="#") About us
+          %li.campus(title="Connect")
+            %a(href="#") Connect
+      .content
+        / content start
+        \...
+        / content end
+      %footer
+        Footer
+      %script(src="dist/js/app.js")
