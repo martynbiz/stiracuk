@@ -56,11 +56,227 @@ keep the resulting css file small(ish)
 @include motion-ui-animations;
 
 
-/*
-Below are our custom components/sections of the website (e.g. homepage)
-*/
+a#logo{
+	display: block;
+	height: 63px;
+	float:left;
+	background: url('/terminalfour/SiteManager?ctfn=download&fnno=60&ceid=18651608'); /* Green */
+    background-repeat: no-repeat;
+    background-size: 306px 55px;
+    width: 310px;
+    margin: 30px 0 15px 0;
+}
 
-@import 'header';
-@import 'footer';
+.no-svg a#logo{
+	background-image: url('/terminalfour/SiteManager?ctfn=download&fnno=60&ceid=398409'); /* 854 144081 */
+}
 
-// @include homepage;
+/* GENERAL LAYOUT */
+
+.row{
+    margin: 0 auto;
+    max-width: 63.9375em; /* 1023px */
+    max-width: 75em;
+    width: 100%;
+}
+
+/* WRAPPERS */
+
+.wrapper-header{
+	background: #fff;
+}
+
+.wrapper-topnav{
+	padding: .5em;
+	background: #eee;
+}
+
+.wrapper-breadcrumb{
+	padding: 1em;
+}
+
+.wrapper-breadcrumb div#breadcrumb{
+	font-size: .8rem;
+}
+
+.wrapper-footer{
+	background: #282828;
+	padding: 2em;
+	color: #fff;
+}
+
+.wrapper-row{
+	padding: 2em;
+}
+
+.wrapper-row.nopad{
+	padding: 0em;
+}
+
+.wrapper-row.shaded{
+	background: #eee;
+}
+
+
+/* ASSETS */
+
+.js.no-details details>div{display:none}.no-details details{display:block;border:0px solid #ccc}.no-details details summary{display:block}details{border:0px solid #ccc;margin-bottom:1em}details summary{font-size:1.2em;line-height:2;padding:0 .5em;background:#e8e8e8;outline:1px dotted transparent}details>div{padding:1em}summary:focus,summary:hover{outline:1px dotted #007934;cursor:pointer}.no-details details summary {background-image: url(/terminalfour/SiteManager?ctfn=download&fnno=60&ceid=3571646);background-position: 1.35rem center;background-repeat: no-repeat;padding: 0.5rem 2.7rem}.no-details details.open summary {background-image: url(/terminalfour/SiteManager?ctfn=download&fnno=60&ceid=2015316);}
+
+details summary {
+	font-family: 'Lato',sans-serif;
+	padding: .5rem .9rem;
+	font-size: 1.4em;
+}
+
+details > div {
+    padding: 1.7em;
+}
+
+details > div h3{
+	margin: 1.2rem 0;
+}
+
+
+
+
+/* TEMP DROPDOWN */
+
+
+
+
+.dropdowns ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdowns li a {
+    display: none;
+    white-space: nowrap;
+}
+
+.dropdowns li li {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdowns li li a {
+    margin-right: 10px;
+}
+
+
+.dropdowns li li a {
+    display: block;
+    padding: 10px 20px;
+    background: #1bc2a2;
+    color: #fff;
+}
+.dropdowns li li a:hover {
+    background: #2c3e50;
+}
+.dropdowns > ul > li > ul > li:last-child a {
+    background: #ddd;
+    color: #ccc
+}
+/*.dropdowns ul li li li:last-child a {
+    background: #1bc2a2;
+    color: #fff;
+}*/
+
+.dropdowns li li > ul {
+    display: none;
+}
+
+.dropdowns li li:hover > ul {
+    display: block;
+    position: absolute;
+}
+
+.dropdowns li li li ul {
+  left: 100%;
+  top: 0;
+}
+
+.dropdowns li li li  {
+    display: block;
+    position: relative;
+}
+.dropdowns li li li a {
+    margin-right: 0;
+}
+
+/*.wrapper-topnav nav ul {
+    margin-bottom: 0rem;
+}
+
+.dropdowns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdowns ul li {
+	display: inline-block;
+}
+
+.dropdowns ul li li {
+	display: block;
+}
+
+.dropdowns ul li {
+  position: relative;
+  float: left;
+  background: #1bc2a2;
+}
+
+.dropdowns li ul {
+    display: none;
+}
+
+.dropdowns ul li a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+.dropdowns ul li a:hover { background: #2c3e50; }
+
+.dropdowns li:hover > ul {
+  display: block;
+  position: absolute;
+}
+
+.dropdowns li:hover li { float: none; }
+
+.dropdowns li:hover a { background: #1bc2a2; }
+
+.dropdowns li:hover li a:hover { background: #2c3e50; }
+
+.dropdowns .main-navigation li ul li { border-top: 0; }
+
+.dropdowns ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+.dropdowns ul:before,
+.dropdowns ul:after {
+  content: " ";
+  display: table;
+}
+
+.dropdowns ul:after { clear: both; }
+
+.dropdowns ul:before,
+.dropdowns ul:after {
+  content: " ";
+  display: table;
+}
+
+.dropdowns ul:after { clear: both; }*/
+
+
+
+@import 'courses';

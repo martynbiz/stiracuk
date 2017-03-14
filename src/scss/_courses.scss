@@ -1,0 +1,120 @@
+/* COURSES */
+
+
+// .row .row {
+//     margin-left: 0;
+//     margin-right: 0;
+// }
+
+.course-wrapper {
+
+    .course-header {
+        margin-bottom: 1em;
+
+        .course-title {
+            dl {
+                float:left;
+                width:100%;
+                font-size: 90%;
+            }
+            dt,
+            dd {
+                float:left;
+                margin:0;
+                padding:0;
+            }
+            dt {
+                padding-right:0.5em;
+                display: none;
+            }
+            dd {
+                margin-right: 20px;
+            }
+        }
+
+        .course-links {
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                text-align: right;
+            }
+        }
+    }
+
+    // this will break tabs on small devices
+    @media screen and #{breakpoint(small only)} {
+        ul.tabs {
+            display: none;
+        }
+        .tabs-panel h2 {
+            display: block;
+        }
+        .tabs-panel {
+            display: block;
+        }
+        .tabs-content {
+            border: none;
+        }
+    }
+
+    #course-tabs {
+        border: none;
+    }
+
+    .tabs-content {
+        border: none;
+
+        // we don't need tab panel headers when we can see selected tab
+        h2 {
+            display: none;
+        }
+
+        .course-intro {
+            margin-bottom: 1em;
+            font-size: 150%;
+        }
+
+        .course-full-intro {
+            background: #eee;
+            margin-bottom: 1em;
+
+            .right {
+                margin: 0;
+                padding: 0;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .course-stats {
+            margin-bottom: 1em;
+        }
+
+        .course-quote {
+            margin-bottom: 1em;
+        }
+
+        .course-unistats {
+            margin-bottom: 1em;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .course-facilities-carousel {
+            margin-bottom: 1em;
+
+            .slick-prev:before,
+            .slick-next:before
+            {
+                color: black;
+            }
+        }
+    }
+}

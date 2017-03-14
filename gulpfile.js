@@ -24,8 +24,8 @@ gulp.task('sass', function () {
 
     return gulp.src('src/scss/app.scss')
         .pipe(sass({
-            includePaths: sassPaths,
-            outputStyle: 'compressed' // if css compressed **file size**
+            // outputStyle: 'compressed', // if css compressed **file size**
+            includePaths: sassPaths
         }))
         .pipe(gulp.dest('src/css'));
 });
@@ -41,9 +41,10 @@ gulp.task('css', function() {
     // Will compile all styles into a single file. Add files to the array,
     // styles will be compiled in that order.
     var scripts = [
-
+        'bower_components/slick-carousel/slick/slick.css',
+        'bower_components/slick-carousel/slick/slick-theme.css',
         //...
-        'src/css/app.css' // compiled app.sass
+        'src/css/app.css' // compiled app.sass (includes foundation css)
     ];
 
     return gulp.src(scripts)
@@ -61,8 +62,10 @@ gulp.task('js', function() {
         'bower_components/jquery/dist/jquery.js',
         'bower_components/what-input/dist/what-input.js',
         'bower_components/foundation-sites/dist/js/foundation.js',
+        'bower_components/slick-carousel/slick/slick.js',
         //...
-        'src/js/app.js'
+        'src/js/app.js',
+        'src/js/courses.js'
     ];
 
     return gulp.src(scripts)
@@ -71,20 +74,23 @@ gulp.task('js', function() {
         .pipe(gulp.dest('dist/js'));
 });
 
-// Get and render all .haml files recursively
-// Html -> Haml converter http://awsm-tools.com/code/html2haml
-gulp.task('haml', function () {
-    return gulp.src('src/haml/**/*.haml')
-        .pipe(haml({ext: '.html'}))
-        .pipe(prettify({indent_char: ' ', indent_size: 4}))
-        .pipe(gulp.dest('dist'));
-});
+// // Get and render all .haml files recursively
+// // Html -> Haml converter http://awsm-tools.com/code/html2haml
+// gulp.task('haml', function () {
+//     return gulp.src('src/haml/**/*.haml')
+//         .pipe(haml({
+//             ext: '.html',
+//             // compiler: 'visionmedia'
+//         }))
+//         .pipe(prettify({indent_char: ' ', indent_size: 4}))
+//         .pipe(gulp.dest('dist'));
+// });
 
 // Gulp default task, will compile styles and scripts. Run with 'gulp'
 gulp.task('default', function() {
     gulp.start('css');
     gulp.start('js');
-    gulp.start('haml');
+    // gulp.start('haml');
 });
 
 // Run with 'gulp watch'
