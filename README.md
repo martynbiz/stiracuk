@@ -36,23 +36,23 @@ part of the compiled/combined/etc distribution:
 
 For Javascript libraries:
 
-'''javascript
+```javascript
 var scripts = [
     //...
     'src/js/somerandom.js' // <-- added
     'src/js/app.js'
 ];
-'''
+```
 
 For CSS libraries:
 
-'''javascript
+```javascript
 var styles = [
     //...
     'src/js/somerandom.css' // <-- added
     'src/js/app.css'
 ];
-'''
+```
 
 
 TODO
