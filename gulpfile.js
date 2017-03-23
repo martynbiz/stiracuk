@@ -46,7 +46,7 @@ gulp.task('css', function() {
 
     return gulp.src(scripts)
         .pipe(concatCss('app.css'))
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        // .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist/css'));
 });
 

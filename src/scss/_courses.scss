@@ -1,12 +1,173 @@
+
+
+
+/* Kitchen sink components */
+
+/* Tabs */
+
+ul.tabs.tabs-plain-white {
+    border: none;
+
+    li {
+        a {
+            // background: $white;
+        }
+
+        &.is-active {
+            a {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+ul.tabs.tabs-flat-gray {
+    border: none;
+    border-bottom: 3px solid $medium-gray;
+    background: $light-gray;
+
+    li {
+        &.is-active {
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+
+    +div.tabs-content {
+        background: $light-gray;
+
+        dd {
+            border-bottom: 2px solid $medium-gray;
+        }
+    }
+}
+
+ul.tabs.tabs-bold-primary {
+    border: none;
+
+    li {
+        // width: 50%;
+        text-align: center;
+
+        a {
+            background: $medium-gray;
+        }
+
+        &.is-active {
+            a {
+                background: $primary-color;
+                color: $white;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+ul.tabs.tabs-bold-primary-3 {
+    @extend .tabs-bold-primary;
+    li {
+        width: 25%;
+    }
+}
+
+ul.tabs.tabs-bold-primary-4 {
+    @extend .tabs-bold-primary;
+    li {
+        width: 33%;
+    }
+}
+
+ul.tabs.tabs-bold-primary-6 {
+    @extend .tabs-bold-primary;
+    li {
+        width: 50%;
+    }
+}
+
+/* Figure blocks */
+
+.figure-block {
+    // @extend .medium-4;
+    @extend .columns;
+    float: left !important;
+    margin-bottom: 1em;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        text-align: center;
+        display: block;
+        padding: 10px;
+        background: $primary-color;
+        color: $white;
+    }
+}
+
+.figure-block-3 {
+    @extend .figure-block;
+    @extend .medium-3;
+}
+
+.figure-block-4 {
+    @extend .figure-block;
+    @extend .medium-4;
+}
+
+.figure-block-6 {
+    @extend .figure-block;
+    @extend .medium-6;
+}
+
+/* Coloured sections */
+
+// e.g. gray section
+.section-coloured {
+    background-color: $light-gray;
+}
+
+/* Sections with images */
+
+.section-image-right {
+    padding-right: 0;
+
+    img {
+        height: auto;
+        float: right;
+        padding-left: $tab-content-padding;
+    }
+}
+
+.section-image-right-4 {
+    @extend .section-image-right;
+
+    img {
+        width: 33%;
+    }
+}
+
+.section-image-right-6 {
+    @extend .section-image-right;
+
+    img {
+        width: 50%;
+    }
+}
+
+
+
+
 /* COURSES */
 
-
-// .row .row {
-//     margin-left: 0;
-//     margin-right: 0;
-// }
-
 .course-wrapper {
+
+    .dtp-todo {
+        background: #ffc;
+    }
 
     .course-header {
         margin-bottom: 1em;
@@ -47,9 +208,6 @@
         ul.tabs {
             display: none;
         }
-        .tabs-panel h2 {
-            display: block;
-        }
         .tabs-panel {
             display: block;
         }
@@ -58,16 +216,60 @@
         }
     }
 
-    #course-tabs {
-        border: none;
+    ul.tabs + div.tabs-content {
+        margin-bottom: 1em;
+    }
+
+    // overview, entry requirements, ...
+    ul#course-tabs {
+        @extend ul.tabs.tabs-plain-white;
+    }
+
+    // uk students / international
+    ul#course-entryreq-tabs {
+        @extend ul.tabs.tabs-bold-primary-6;
+    }
+
+    // 2017 entry / 2018 entry
+    ul#course-entryreq-ukstudents-tabs,
+    ul#course-entryreq-international-tabs,
+    ul#course-fees-tabs {
+        @extend ul.tabs.tabs-flat-gray;
+    }
+
+    // year1, year2, ...
+    ul#course-modules-tabs {
+        @extend ul.tabs.tabs-bold-primary-3;
+
+        +div.tabs-content {
+            background: $light-gray;
+
+            table {
+                border-spacing: 0;
+                text-align: left;
+
+                tbody {
+                    border: none;
+                }
+
+                th {
+                    border-bottom: 2px solid $medium-gray;
+                    background: $light-gray;
+                }
+
+                td {
+                    border-bottom: 1px solid $medium-gray;
+                    background: $light-gray;
+                }
+            }
+        }
     }
 
     .tabs-content {
         border: none;
 
-        // we don't need tab panel headers when we can see selected tab
-        h2 {
-            display: none;
+        .row {
+            margin-bottom: 2em;
         }
 
         .course-intro {
@@ -76,7 +278,7 @@
         }
 
         .course-full-intro {
-            background: #eee;
+            background: $light-gray;
             margin-bottom: 1em;
 
             .right {
@@ -90,23 +292,6 @@
             }
         }
 
-        .course-stats {
-            margin-bottom: 1em;
-        }
-
-        .course-quote {
-            margin-bottom: 1em;
-        }
-
-        .course-unistats {
-            margin-bottom: 1em;
-
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-
         .course-facilities-carousel {
             margin-bottom: 1em;
 
@@ -114,6 +299,48 @@
             .slick-next:before
             {
                 color: black;
+            }
+        }
+
+        table.english-language-requirements {
+            @extend .text-left;
+            border-spacing: 0;
+
+            tr,
+            td {
+                background: $light-gray;
+                border: none;
+            }
+
+            th {
+                font-weight: normal;
+            }
+
+            th,
+            td {
+                border-bottom: 2px solid $medium-gray;
+            }
+
+            tr:first-child {
+                th,
+                td {
+                    font-weight: bold !important;
+                }
+            }
+        }
+
+        table.flexible-degree {
+            td {
+                text-align: center;
+            }
+        }
+
+        .get-in-touch {
+            table {
+                border-spacing: 0;
+                tbody {
+                    background: $light-gray;
+                }
             }
         }
     }
