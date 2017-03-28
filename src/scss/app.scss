@@ -9,9 +9,11 @@ Below are all foundation components, we can uncomment those that we require to
 keep the resulting css file small(ish)
 */
 
+
+
 @include foundation-global-styles;
-@include foundation-grid;
-// @include foundation-flex-grid;
+// @include foundation-grid; // removed
+@include foundation-flex-grid; // added
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -50,7 +52,7 @@ keep the resulting css file small(ish)
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
-// @include foundation-flex-classes;
+@include foundation-flex-classes; // added
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
