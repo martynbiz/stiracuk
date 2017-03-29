@@ -4,8 +4,7 @@ var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css');
-// var watch = require('gulp-watch');
-
+var sourcemaps = require('gulp-sourcemaps');
 
 // Task for compiling sass, and minifying. Run with 'gulp sass'
 gulp.task('sass', function () {
@@ -18,10 +17,12 @@ gulp.task('sass', function () {
     ];
 
     return gulp.src('src/scss/app.scss')
+        // .pipe(sourcemaps.init())
         .pipe(sass({
             // outputStyle: 'compressed', // if css compressed **file size**
             includePaths: sassPaths
         }))
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest('src/css'));
 });
 
@@ -29,9 +30,6 @@ gulp.task('sass', function () {
 // guarantee all style libraries will provide sass files, this task will
 // allow us to bring in css files too.
 gulp.task('css', function() {
-
-    // // do any sass compilation prior to concating css files.
-    // gulp.start('sass');
 
     // Will compile all styles into a single file. Add files to the array,
     // styles will be compiled in that order.
@@ -44,7 +42,7 @@ gulp.task('css', function() {
 
     return gulp.src(scripts)
         .pipe(concatCss('app.css'))
-        // .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist/css'));
 });
 
@@ -74,20 +72,3 @@ gulp.task('default', ['sass'], function() {
     gulp.watch(['src/css/**/*.css'], ['css']);
     gulp.watch(['src/js/**/*.js'], ['js']);
 });
-
-// // Gulp default task, will compile styles and scripts. Run with 'gulp'
-// gulp.task('default', function() {
-//     gulp.start('sass');
-//     gulp.start('js');
-// });
-//
-// // Run with 'gulp watch'
-// gulp.task('watch', function () {
-//     // watch(['src/scss/**/*.scss', 'src/js/**/*.js'], function (event) {
-//     //     gulp.start('css');
-//     //     gulp.start('js');
-//     // });
-//
-//     gulp.watch(['src/scss/**/*.scss'], ['sass']);
-//     // gulp.watch(['src/scss/**/*.scss'], ['sass']);
-// });

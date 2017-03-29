@@ -5,7 +5,13 @@
 
 /* Tabs */
 
-ul.tabs.tabs-plain-white {
+.tabs {
+    +div.tabs-content {
+        margin-bottom: 1em;
+    }
+}
+
+.tabs-plain {
     border: none;
 
     li {
@@ -20,9 +26,13 @@ ul.tabs.tabs-plain-white {
             }
         }
     }
+
+    +div.tabs-content {
+        border: none;
+    }
 }
 
-ul.tabs.tabs-flat-gray {
+.tabs-flat {
     border: none;
     border-bottom: 3px solid $medium-gray;
     background: $light-gray;
@@ -44,7 +54,7 @@ ul.tabs.tabs-flat-gray {
     }
 }
 
-ul.tabs.tabs-bold-primary {
+.tabs-bold {
     border: none;
 
     li {
@@ -64,33 +74,30 @@ ul.tabs.tabs-bold-primary {
         }
     }
 }
-
-ul.tabs.tabs-bold-primary-3 {
-    @extend .tabs-bold-primary;
+.tabs-bold-3 {
+    // @extend .tabs-bold;
     li {
         width: 25%;
     }
 }
-
-ul.tabs.tabs-bold-primary-4 {
-    @extend .tabs-bold-primary;
+.tabs-bold-4 {
+    // @extend .tabs-bold;
     li {
         width: 33%;
     }
 }
-
-ul.tabs.tabs-bold-primary-6 {
-    @extend .tabs-bold-primary;
+.tabs-bold-6 {
+    // @extend .tabs-bold;
     li {
         width: 50%;
     }
 }
 
+
 /* Figure blocks */
 
 .figure-block {
-    // @extend .medium-4;
-    @extend .columns;
+    // @extend .columns;
     float: left !important;
     margin-bottom: 1em;
 
@@ -108,25 +115,26 @@ ul.tabs.tabs-bold-primary-6 {
     }
 }
 
-.figure-block-3 {
-    @extend .figure-block;
-    @extend .medium-3;
-}
-
-.figure-block-4 {
-    @extend .figure-block;
-    @extend .medium-4;
-}
-
-.figure-block-6 {
-    @extend .figure-block;
-    @extend .medium-6;
-}
+// .figure-block-3 {
+//     // @extend .figure-block;
+//     @extend .medium-3;
+// }
+//
+// .figure-block-4 {
+//     // @extend .figure-block;
+//     @extend .medium-4;
+// }
+//
+// .figure-block-6 {
+//     // @extend .figure-block;
+//     @extend .medium-6;
+// }
 
 /* Coloured sections */
 
 // e.g. gray section
-.section-coloured {
+// .section-coloured {
+.row-shaded {
     background-color: $light-gray;
 }
 
@@ -142,16 +150,26 @@ ul.tabs.tabs-bold-primary-6 {
     }
 }
 
-.section-image-right-4 {
-    @extend .section-image-right;
+.section-image-left {
+    padding-left: 0;
+
+    img {
+        height: auto;
+        float: left;
+        padding-right: $tab-content-padding;
+    }
+}
+
+.section-image-4 {
+    // @extend .section-image-right;
 
     img {
         width: 33%;
     }
 }
 
-.section-image-right-6 {
-    @extend .section-image-right;
+.section-image-6 {
+    // @extend .section-image-right;
 
     img {
         width: 50%;
@@ -220,26 +238,26 @@ ul.tabs.tabs-bold-primary-6 {
         margin-bottom: 1em;
     }
 
-    // overview, entry requirements, ...
-    ul#course-tabs {
-        @extend ul.tabs.tabs-plain-white;
-    }
+    // // overview, entry requirements, ...
+    // ul#course-tabs {
+    //     @extend ul.tabs.tabs-plain;
+    // }
 
-    // uk students / international
-    ul#course-entryreq-tabs {
-        @extend ul.tabs.tabs-bold-primary-6;
-    }
-
-    // 2017 entry / 2018 entry
-    ul#course-entryreq-ukstudents-tabs,
-    ul#course-entryreq-international-tabs,
-    ul#course-fees-tabs {
-        @extend ul.tabs.tabs-flat-gray;
-    }
+    // // uk students / international
+    // ul#course-entryreq-tabs {
+    //     @extend ul.tabs.tabs-bold-6;
+    // }
+    //
+    // // 2017 entry / 2018 entry
+    // ul#course-entryreq-ukstudents-tabs,
+    // ul#course-entryreq-international-tabs,
+    // ul#course-fees-tabs {
+    //     @extend ul.tabs.tabs-flat;
+    // }
 
     // year1, year2, ...
     ul#course-modules-tabs {
-        @extend ul.tabs.tabs-bold-primary-3;
+        // @extend ul.tabs.tabs-bold-3;
 
         +div.tabs-content {
             background: $light-gray;
@@ -294,16 +312,10 @@ ul.tabs.tabs-bold-primary-6 {
 
         .course-facilities-carousel {
             margin-bottom: 1em;
-
-            .slick-prev:before,
-            .slick-next:before
-            {
-                color: black;
-            }
         }
 
         table.english-language-requirements {
-            @extend .text-left;
+            // @extend .text-left;
             border-spacing: 0;
 
             tr,
@@ -332,6 +344,7 @@ ul.tabs.tabs-bold-primary-6 {
         table.flexible-degree {
             td {
                 text-align: center;
+
             }
         }
 
@@ -342,6 +355,29 @@ ul.tabs.tabs-bold-primary-6 {
                     background: $light-gray;
                 }
             }
+        }
+
+        // carousel
+        .slick-slide {
+            opacity: 0.4;
+
+            img {
+                display: inline-block;
+            }
+
+            // iframe {
+            //     max-width: 450px;
+            // }
+        }
+
+        .slick-active {
+            opacity: 1;
+        }
+
+        .slick-prev:before,
+        .slick-next:before
+        {
+            color: black;
         }
     }
 }

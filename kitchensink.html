@@ -20,6 +20,13 @@
             margin-top: 1em;
             margin-bottom: 1em;
         }
+
+        pre {
+            background: #eee;
+            border: 1px solid #999;
+            padding: 20px;
+            margin-bottom: 1em;
+        }
         </style>
     </head>
     <body>
@@ -37,9 +44,29 @@
 
                 <p>Check oot our delightful tabs on offer</p>
 
-                <h3>Simple Gray</h3>
+                <h3>Plain</h3>
 
-                <ul class="tabs flat-gray" data-tabs id="example-tabs">
+                <ul class="tabs tabs-plain" data-tabs id="example-tabs-plain">
+                    <li class="tabs-title is-active"><a href="#example-plain-tab1" aria-selected="true">Overview</a></li>
+                    <li class="tabs-title"><a href="#example-plain-tab2">Entry Requirements</a></li>
+                    <li class="tabs-title"><a href="#example-plain-tab3">Course Details</a></li>
+                </ul>
+
+                <div class="tabs-content course-top-level-tabs-content" data-tabs-content="example-tabs-plain">
+                    <div class="tabs-panel is-active" id="example-plain-tab1">
+                        Tab 1
+                    </div>
+                    <div class="tabs-panel is-active" id="example-plain-tab2">
+                        Tab 2
+                    </div>
+                    <div class="tabs-panel is-active" id="example-plain-tab3">
+                        Tab 3
+                    </div>
+                </div>
+
+                <h3>Flat</h3>
+
+                <ul class="tabs tabs-flat" data-tabs id="example-tabs">
                     <li class="tabs-title is-active"><a href="#tab1" aria-selected="true">Overview</a></li>
                     <li class="tabs-title"><a href="#tab2">Entry Requirements</a></li>
                     <li class="tabs-title"><a href="#tab3">Course Details</a></li>
@@ -59,36 +86,36 @@
 
                 <h3>Bold Primary 4</h3>
 
-                <ul class="tabs bold-primary-4" data-tabs id="example-bold-primary-4-tabs">
-                    <li class="tabs-title is-active"><a href="#example-bold-primary-4-tab1" aria-selected="true">Tab 1</a></li>
-                    <li class="tabs-title"><a href="#example-bold-primary-4-tab2">Tab 2</a></li>
-                    <li class="tabs-title"><a href="#example-bold-primary-4-tab3">Tab 3</a></li>
+                <ul class="tabs tabs-bold tabs-bold-4" data-tabs id="example-tabs-bold-4">
+                    <li class="tabs-title is-active"><a href="#example-tabs-bold-4-tab1" aria-selected="true">Tab 1</a></li>
+                    <li class="tabs-title"><a href="#example-tabs-bold-4-tab2">Tab 2</a></li>
+                    <li class="tabs-title"><a href="#example-tabs-bold-4-tab3">Tab 3</a></li>
                 </ul>
 
-                <div class="tabs-content course-top-level-tabs-content" data-tabs-content="example-bold-primary-4-tabs">
-                    <div class="tabs-panel is-active" id="example-bold-primary-4-tab1">
+                <div class="tabs-content course-top-level-tabs-content" data-tabs-content="example-tabs-bold-4">
+                    <div class="tabs-panel is-active" id="example-tabs-bold-4-tab1">
                         Tab 1
                     </div>
-                    <div class="tabs-panel is-active" id="example-bold-primary-4-tab2">
+                    <div class="tabs-panel is-active" id="example-tabs-bold-4-tab2">
                         Tab 2
                     </div>
-                    <div class="tabs-panel is-active" id="example-bold-primary-4-tab3">
+                    <div class="tabs-panel is-active" id="example-tabs-bold-4-tab3">
                         Tab 3
                     </div>
                 </div>
 
                 <h3>Bold Primary 6</h3>
 
-                <ul class="tabs bold-primary-6" data-tabs id="example-bold-primary-tabs">
-                    <li class="tabs-title is-active"><a href="#example-bold-primary-tab1" aria-selected="true">Overview</a></li>
-                    <li class="tabs-title"><a href="#example-bold-primary-tab2">Entry Requirements</a></li>
+                <ul class="tabs tabs-bold tabs-bold-6" data-tabs id="example-tabs-bold-6">
+                    <li class="tabs-title is-active"><a href="#example-tabs-bold-6-tab1" aria-selected="true">Overview</a></li>
+                    <li class="tabs-title"><a href="#example-tabs-bold-6-tab2">Entry Requirements</a></li>
                 </ul>
 
-                <div class="tabs-content course-top-level-tabs-content" data-tabs-content="example-bold-primary-tabs">
-                    <div class="tabs-panel is-active" id="example-bold-primary-tab1">
+                <div class="tabs-content course-top-level-tabs-content" data-tabs-content="example-tabs-bold-6">
+                    <div class="tabs-panel is-active" id="example-tabs-bold-6-tab1">
                         Tab 1
                     </div>
-                    <div class="tabs-panel is-active" id="example-bold-primary-tab2">
+                    <div class="tabs-panel is-active" id="example-tabs-bold-6-tab2">
                         Tab 2
                     </div>
                 </div>
@@ -97,79 +124,98 @@
 
                 <h3>2 block row</h3>
 
-                <figure class="figure-block-6">
-                    <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                    <figcaption>Course 1</figcaption>
-                </figure>
+                <div class="row">
+                    <figure class="columns small-12 medium-6 figure-block">
+                        <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
+                        <figcaption>Course 1</figcaption>
+                    </figure>
 
-                <figure class="figure-block-6">
-                    <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                    <figcaption>Course 2</figcaption>
-                </figure>
+                    <figure class="columns small-12 medium-6 figure-block">
+                        <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
+                        <figcaption>Course 2</figcaption>
+                    </figure>
+                </div>
 
                 <h3>3 block row</h3>
 
-                <figure class="figure-block-4">
+                                <div class="row">
+                <figure class="columns small-12 medium-4 figure-block">
                     <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
                     <figcaption>Course 1</figcaption>
                 </figure>
 
-                <figure class="figure-block-4">
+                <figure class="columns small-12 medium-4 figure-block">
                     <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
                     <figcaption>Course 2</figcaption>
                 </figure>
 
-                <figure class="figure-block-4">
+                <figure class="columns small-12 medium-4 figure-block">
                     <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
                     <figcaption>Course 3</figcaption>
                 </figure>
+            </div>
 
                 <h3>4 block row</h3>
 
-                <figure class="figure-block-3">
+                                <div class="row">
+                <figure class="columns small-12 medium-3 figure-block">
                     <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
                     <figcaption>Course 1</figcaption>
                 </figure>
 
-                <figure class="figure-block-3">
+                <figure class="columns small-12 medium-3 figure-block">
                     <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
                     <figcaption>Course 2</figcaption>
                 </figure>
 
-                <figure class="figure-block-3">
+                <figure class="columns small-12 medium-3 figure-block">
                     <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
                     <figcaption>Course 3</figcaption>
                 </figure>
 
-                <figure class="figure-block-3">
+                <figure class="columns small-12 medium-3 figure-block">
                     <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
                     <figcaption>Course 4</figcaption>
                 </figure>
+            </div>
 
                 <h3>As links</h3>
 
-                <a href="#" class="figure-block-6">
+                                <div class="row">
+                <a href="#" class="columns small-12 medium-6 figure-block">
                     <figure>
                         <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
                         <figcaption>Course 1</figcaption>
                     </figure>
                 </a>
 
-                <a href="#" class="figure-block-6">
+                <a href="#" class="columns small-12 medium-6 figure-block">
                     <figure>
                         <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
                         <figcaption>Course 2</figcaption>
                     </figure>
                 </a>
+            </div>
 
                 <hr>
 
                 <h2>Section Images</h2>
 
-                <p>Will align an image neatly to the right/left of a column</p>
+                <p>Will align an image flush to the right/left of a column</p>
+
+                <h3>Right aligned</h3>
 
                 <div class="row">
-                    <div class="small-12 medium-12 columns section-image-right-4">
+                    <div class="small-12 medium-12 columns section-image section-image-right section-image-4">
+                        <img data-interchange="[http://placehold.it/350x250, small], [http://placehold.it/350x250, medium], [ http://placehold.it/350x250, large]">
+                        <p>The Bachelor of Accountancy (BAcc) course is designed to help propel your career in accountancy or the wider financial sector. The programme allows you to gain significant examination exemptions from professional bodies, meaning you can progress quickly with external qualifications after graduation. The BAcc Degrees (single and joint) are accredited by leading professional bodies including: the Association of Chartered Certified Accountants (ACCA); the Chartered Institute of Management Accountants (CIMA); the Chartered Institute of Public Finance and Accountancy (CIPFA); and the Institute of Chartered Accountants in Scotland (ICAS).</p>
+                    </div>
+                </div>
+
+                <h3>Left aligned</h3>
+
+                <div class="row">
+                    <div class="small-12 medium-12 columns section-image section-image-left section-image-4">
                         <img data-interchange="[http://placehold.it/350x250, small], [http://placehold.it/350x250, medium], [ http://placehold.it/350x250, large]">
                         <p>The Bachelor of Accountancy (BAcc) course is designed to help propel your career in accountancy or the wider financial sector. The programme allows you to gain significant examination exemptions from professional bodies, meaning you can progress quickly with external qualifications after graduation. The BAcc Degrees (single and joint) are accredited by leading professional bodies including: the Association of Chartered Certified Accountants (ACCA); the Chartered Institute of Management Accountants (CIMA); the Chartered Institute of Public Finance and Accountancy (CIPFA); and the Institute of Chartered Accountants in Scotland (ICAS).</p>
                     </div>
@@ -177,18 +223,18 @@
 
                 <hr>
 
-                <h2>Coloured sections</h2>
+                <h2>Shaded row</h2>
 
                 <p>Used to break sections up with coloured backgrounds</p>
 
-                <div class="row">
+                <div class="row row-shaded">
                     <div class="small-12 medium-12 columns section-coloured">
                         <h3>Faculty Profile</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row row-shaded">
                     <div class="small-12 medium-12 columns">
                         <h3>Insights into Your Future Career</h3>
 
