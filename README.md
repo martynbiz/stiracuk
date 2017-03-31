@@ -48,8 +48,8 @@ so they are not being versioned here. You can search for bower dependencies here
 
 https://bower.io/search/
 
-For all other dependencies (e.g. those not available to Bower) put into the
-src/js folder.
+For all other dependencies (e.g. those not available to Bower) put into the src/css
+and src/js folder.
 
 Once the dependencies is available, add it to the gulpfile array so that it is
 part of the compiled/combined/etc distribution:
@@ -69,7 +69,7 @@ For CSS libraries:
 ```javascript
 var styles = [
     //...
-    'src/js/somerandom.css' // <-- added
-    'src/js/app.css'
+    'src/css/somerandom.css' // <-- added
+    'src/css/app.css'
 ];
 ```
