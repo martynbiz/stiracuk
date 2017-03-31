@@ -27,6 +27,15 @@ to aid debugging.
 
 Use the dist/css/app.css and dist/js/app.js files in your project.
 
+## browserSync (optional)
+
+BrowserSync enables synchronised browser testing. When files are saved, the CSS and
+JS is updated automatically without need for a page reload. Try it out, it's dope!
+
+```
+gulp --browserSync
+```
+
 ## Adding Foundation components (e.g. dropdowns)
 
 Unused Foundation components should be commented out in the src/scss/app.scss

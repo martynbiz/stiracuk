@@ -7,6 +7,7 @@ var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
 var gulpif = require('gulp-if');
 var minimist = require('minimist');
+var browserSync = require('browser-sync').create();
 
 // get parameters from cli
 // @see http://gulpjs.org/recipes/pass-arguments-from-cli.html
@@ -51,7 +52,8 @@ gulp.task('css', function() {
     return gulp.src(scripts)
         .pipe(concatCss('app.css'))
         .pipe(gulpif(options.env === 'production', cleanCSS({compatibility: 'ie8'})))
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('dist/css'))
+        .pipe(browserSync.stream());
 });
 
 // Task for compiling scripts, and minifying. Run with 'gulp js'
@@ -72,10 +74,20 @@ gulp.task('js', function() {
     return gulp.src(scripts)
         .pipe(concat('app.js'))
         .pipe(gulpif(options.env === 'production', uglify()))
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('dist/js'))
+        .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['sass'], function() {
+gulp.task('default', function() {
+
+    if(options.browserSync) {
+        browserSync.init({
+            server: {
+                baseDir: "./"
+            }
+        });
+    }
+
     gulp.watch(['src/scss/**/*.scss'], ['sass']);
     gulp.watch(['src/css/**/*.css'], ['css']);
     gulp.watch(['src/js/**/*.js'], ['js']);
