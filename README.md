@@ -5,7 +5,7 @@
 To manually set up the project, first clone it with Git:
 
 ```bash
-git clone https://github.com/martynbiz/stiracuk projectname
+git clone https://[user]@gitlab.com/stiracuk/f6dtp.git projectname
 ```
 
 Then open the folder in your command line, and install the required dependencies:
@@ -30,7 +30,7 @@ Use the dist/css/app.css and dist/js/app.js files in your project.
 ## Adding Foundation components (e.g. dropdowns)
 
 Unused Foundation components should be commented out in the src/scss/app.scss
-file. To re-introduce these, uncomment them and re-run gulp.
+file. To re-introduce these, uncomment them and allow Gulp to recompile, etc.
 
 ## Adding CSS/JS dependencies
 
