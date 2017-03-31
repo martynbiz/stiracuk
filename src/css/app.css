@@ -2572,3 +2572,121 @@ details > div h3 {
     color: black; }
 
 /* FACULTIES */
+div.tabs-content {
+  /*margin-bottom: 1em;*/ }
+
+.tabs,
+.tabs-content {
+  border: none; }
+
+.tabs-panel {
+  padding: 0; }
+
+table tbody, table tfoot, table thead {
+  border: 0; }
+
+section.padding {
+  padding: 3.5em; }
+
+section h2 {
+  margin: 0 0 1em 0; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.v-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.v-bottom {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.h-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center; }
+
+.bg-grey {
+  background-color: #95989a; }
+
+.bg-lightGrey {
+  background-color: #e5e5e5; }
+
+.bg-lighterGrey {
+  background-color: #ccc; }
+
+.title-block {
+  max-height: 354px;
+  min-height: 354px;
+  position: relative; }
+
+.__title {
+  bottom: 0;
+  padding: 20px;
+  position: absolute;
+  width: 100%; }
+
+.__title {
+  color: #fff;
+  font-size: 22px; }
+
+.quote p {
+  color: #95989a;
+  font-size: 38px;
+  font-style: italic;
+  line-height: 1.2; }
+
+.dash {
+  padding: 0 3px; }
+
+.dash,
+.name {
+  color: #95989A;
+  font-weight: 700; }
+
+.course {
+  font-weight: 400; }
+
+.feed-block {
+  min-height: 354px;
+  max-height: 354px;
+  position: relative; }
+
+.feed-block__title {
+  color: #fff;
+  padding: 50px; }
+
+.feed-block__content {
+  font-size: 18px;
+  padding: 50px; }
+
+.feed-block.social {
+  padding: 50px; }
+
+.feed-block.social li {
+  padding: 50px 0; }
+
+.feed-block img {
+  width: 40px; }
+
+.research .title-block {
+  max-height: 264px;
+  min-height: 264px; }
+
+slick-prev:before,
+.slick-next:before,
+.slick-next:before,
+.slick-prev:before {
+  color: #000; }
