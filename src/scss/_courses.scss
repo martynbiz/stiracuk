@@ -40,19 +40,6 @@
         }
     }
 
-    // this will break tabs on small devices
-    @media screen and #{breakpoint(small only)} {
-        ul.tabs {
-            display: none;
-        }
-        .tabs-panel {
-            display: block;
-        }
-        .tabs-content {
-            border: none;
-        }
-    }
-
     ul.tabs + div.tabs-content {
         margin-bottom: 1em;
     }
@@ -109,72 +96,72 @@
             margin-bottom: 2em;
         }
 
-        .course-intro {
-            margin-bottom: 1em;
-            font-size: 150%;
-        }
-
-        .course-full-intro {
-            background: $light-gray;
-            margin-bottom: 1em;
-
-            .right {
-                margin: 0;
-                padding: 0;
-
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            }
-        }
+        // .course-intro {
+        //     margin-bottom: 1em;
+        //     font-size: 150%;
+        // }
+        //
+        // .course-full-intro {
+        //     background: $light-gray;
+        //     margin-bottom: 1em;
+        //
+        //     .right {
+        //         margin: 0;
+        //         padding: 0;
+        //
+        //         img {
+        //             width: 100%;
+        //             height: auto;
+        //         }
+        //     }
+        // }
 
         .course-facilities-carousel {
             margin-bottom: 1em;
         }
 
-        table.english-language-requirements {
-            // @extend .text-left;
-            border-spacing: 0;
+        // table.english-language-requirements {
+        //     // @extend .text-left;
+        //     border-spacing: 0;
+        //
+        //     tr,
+        //     td {
+        //         background: $light-gray;
+        //         border: none;
+        //     }
+        //
+        //     th {
+        //         font-weight: normal;
+        //     }
+        //
+        //     th,
+        //     td {
+        //         border-bottom: 2px solid $medium-gray;
+        //     }
+        //
+        //     tr:first-child {
+        //         th,
+        //         td {
+        //             font-weight: bold !important;
+        //         }
+        //     }
+        // }
 
-            tr,
-            td {
-                background: $light-gray;
-                border: none;
-            }
+        // table.flexible-degree {
+        //     td {
+        //         text-align: center;
+        //
+        //     }
+        // }
 
-            th {
-                font-weight: normal;
-            }
-
-            th,
-            td {
-                border-bottom: 2px solid $medium-gray;
-            }
-
-            tr:first-child {
-                th,
-                td {
-                    font-weight: bold !important;
-                }
-            }
-        }
-
-        table.flexible-degree {
-            td {
-                text-align: center;
-
-            }
-        }
-
-        .get-in-touch {
-            table {
-                border-spacing: 0;
-                tbody {
-                    background: $light-gray;
-                }
-            }
-        }
+        // .get-in-touch {
+        //     table {
+        //         border-spacing: 0;
+        //         tbody {
+        //             background: $light-gray;
+        //         }
+        //     }
+        // }
 
         // carousel
         .slick-slide {

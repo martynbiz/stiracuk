@@ -2421,6 +2421,14 @@ details > div h3 {
 
 /* KITCHEN SINK COMPONENTS */
 /* Tabs */
+@media screen and (max-width: 39.9375em) {
+  ul.tabs.tabs-break-for-small {
+    display: none; }
+    ul.tabs.tabs-break-for-small + div.tabs-content {
+      border: none; }
+      ul.tabs.tabs-break-for-small + div.tabs-content .tabs-panel {
+        display: block; } }
+
 .tabs + div.tabs-content {
   margin-bottom: 1em; }
 
@@ -2530,14 +2538,6 @@ details > div h3 {
     list-style: none;
     text-align: right; }
 
-@media screen and (max-width: 39.9375em) {
-  .course-wrapper ul.tabs {
-    display: none; }
-  .course-wrapper .tabs-panel {
-    display: block; }
-  .course-wrapper .tabs-content {
-    border: none; } }
-
 .course-wrapper ul.tabs + div.tabs-content {
   margin-bottom: 1em; }
 
@@ -2559,40 +2559,8 @@ details > div h3 {
   border: none; }
   .course-wrapper .tabs-content .row {
     margin-bottom: 2em; }
-  .course-wrapper .tabs-content .course-intro {
-    margin-bottom: 1em;
-    font-size: 150%; }
-  .course-wrapper .tabs-content .course-full-intro {
-    background: #e6e6e6;
-    margin-bottom: 1em; }
-    .course-wrapper .tabs-content .course-full-intro .right {
-      margin: 0;
-      padding: 0; }
-      .course-wrapper .tabs-content .course-full-intro .right img {
-        width: 100%;
-        height: auto; }
   .course-wrapper .tabs-content .course-facilities-carousel {
     margin-bottom: 1em; }
-  .course-wrapper .tabs-content table.english-language-requirements {
-    border-spacing: 0; }
-    .course-wrapper .tabs-content table.english-language-requirements tr,
-    .course-wrapper .tabs-content table.english-language-requirements td {
-      background: #e6e6e6;
-      border: none; }
-    .course-wrapper .tabs-content table.english-language-requirements th {
-      font-weight: normal; }
-    .course-wrapper .tabs-content table.english-language-requirements th,
-    .course-wrapper .tabs-content table.english-language-requirements td {
-      border-bottom: 2px solid #cacaca; }
-    .course-wrapper .tabs-content table.english-language-requirements tr:first-child th,
-    .course-wrapper .tabs-content table.english-language-requirements tr:first-child td {
-      font-weight: bold !important; }
-  .course-wrapper .tabs-content table.flexible-degree td {
-    text-align: center; }
-  .course-wrapper .tabs-content .get-in-touch table {
-    border-spacing: 0; }
-    .course-wrapper .tabs-content .get-in-touch table tbody {
-      background: #e6e6e6; }
   .course-wrapper .tabs-content .slick-slide {
     opacity: 0.4; }
     .course-wrapper .tabs-content .slick-slide img {

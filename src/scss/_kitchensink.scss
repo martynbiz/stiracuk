@@ -2,6 +2,21 @@
 
 /* Tabs */
 
+// this will break tabs on small devices
+ul.tabs.tabs-break-for-small {
+    @media screen and #{breakpoint(small only)} {
+        display: none;
+
+        +div.tabs-content {
+            border: none;
+
+            .tabs-panel {
+                display: block;
+            }
+        }
+    }
+}
+
 .tabs {
     +div.tabs-content {
         margin-bottom: 1em;

@@ -4,6 +4,7 @@
   "description": "Foundation site",
   "devDependencies": {
     "bower": "~1.6.5",
+    "browser-sync": "^2.18.8",
     "gulp": "^3.9.0",
     "gulp-clean-css": "^3.0.3",
     "gulp-concat": "~2.6.0",
