@@ -5,8 +5,19 @@ var sass = require('gulp-sass');
 var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
+var gulpif = require('gulp-if');
+var minimist = require('minimist');
 
-// Task for compiling sass, and minifying. Run with 'gulp sass'
+// get parameters from cli
+// @see http://gulpjs.org/recipes/pass-arguments-from-cli.html
+var knownOptions = {
+  string: 'env',
+  default: { env: process.env.NODE_ENV || 'production' }
+};
+var options = minimist(process.argv.slice(2), knownOptions);
+
+
+// Task for compiling sass. Run with 'gulp sass'
 gulp.task('sass', function () {
 
     // include paths for sass compiler
@@ -17,12 +28,9 @@ gulp.task('sass', function () {
     ];
 
     return gulp.src('src/scss/app.scss')
-        // .pipe(sourcemaps.init())
-        .pipe(sass({
-            // outputStyle: 'compressed', // if css compressed **file size**
-            includePaths: sassPaths
-        }))
-        // .pipe(sourcemaps.write())
+        .pipe(gulpif(options.env !== 'production', sourcemaps.init()))
+        .pipe(sass({includePaths: sassPaths}))
+        .pipe(gulpif(options.env !== 'production', sourcemaps.write()))
         .pipe(gulp.dest('src/css'));
 });
 
@@ -42,7 +50,7 @@ gulp.task('css', function() {
 
     return gulp.src(scripts)
         .pipe(concatCss('app.css'))
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulpif(options.env === 'production', cleanCSS({compatibility: 'ie8'})))
         .pipe(gulp.dest('dist/css'));
 });
 
@@ -63,7 +71,7 @@ gulp.task('js', function() {
 
     return gulp.src(scripts)
         .pipe(concat('app.js'))
-        .pipe(uglify()) // minify
+        .pipe(gulpif(options.env === 'production', uglify()))
         .pipe(gulp.dest('dist/js'));
 });
 

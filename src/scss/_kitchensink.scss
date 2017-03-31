@@ -1,0 +1,156 @@
+/* KITCHEN SINK COMPONENTS */
+
+/* Tabs */
+
+.tabs {
+    +div.tabs-content {
+        margin-bottom: 1em;
+    }
+}
+
+.tabs-plain {
+    border: none;
+
+    li {
+        &.is-active {
+            a {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    +div.tabs-content {
+        border: none;
+    }
+}
+
+.tabs-flat {
+    border: none;
+    border-bottom: 3px solid $medium-gray;
+    background: $light-gray;
+
+    li {
+        &.is-active {
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+
+    +div.tabs-content {
+        background: $light-gray;
+
+        dd {
+            border-bottom: 2px solid $medium-gray;
+        }
+    }
+}
+
+.tabs-bold {
+    border: none;
+
+    li {
+        // width: 50%;
+        text-align: center;
+
+        a {
+            background: $medium-gray;
+
+            &:hover {
+                background: $medium-gray;
+            }
+        }
+
+        &.is-active {
+            a {
+                background: $primary-color;
+                color: $white;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.tabs-bold-3 {
+    li {
+        width: 25%;
+    }
+}
+.tabs-bold-4 {
+    li {
+        width: 33%;
+    }
+}
+.tabs-bold-6 {
+    li {
+        width: 50%;
+    }
+}
+
+
+/* Figure blocks */
+
+.figure-block {
+    // @extend .columns;
+    float: left !important;
+    margin-bottom: 1em;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        text-align: center;
+        display: block;
+        padding: 10px;
+        background: $primary-color;
+        color: $white;
+    }
+}
+
+/* Shaded rows */
+
+// e.g. gray section
+// .section-coloured {
+.row-shaded {
+    background-color: $light-gray;
+}
+
+/* Sections with images */
+
+.section-image-right {
+    padding-right: 0;
+
+    img {
+        height: auto;
+        float: right;
+        padding-left: $tab-content-padding;
+    }
+}
+
+.section-image-left {
+    padding-left: 0;
+
+    img {
+        height: auto;
+        float: left;
+        padding-right: $tab-content-padding;
+    }
+}
+
+.section-image-4 {
+    // @extend .section-image-right;
+
+    img {
+        width: 33%;
+    }
+}
+
+.section-image-6 {
+    // @extend .section-image-right;
+
+    img {
+        width: 50%;
+    }
+}
