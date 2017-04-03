@@ -2,6 +2,21 @@
 
 .course-wrapper {
 
+    .tabs-content-courses {
+        >.tabs-panel {
+            padding: 0;
+        }
+    }
+
+    .tabs {
+        // margin-bottom: 1em;
+
+        +div.tabs-content {
+            border: none;
+            margin-bottom: 1em;
+        }
+    }
+
     .row {
         margin-bottom: 1em;
     }

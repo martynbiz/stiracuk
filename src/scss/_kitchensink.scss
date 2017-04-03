@@ -3,7 +3,7 @@
 /* Tabs */
 
 // this will break tabs on small devices
-ul.tabs.tabs-break-for-small {
+ul.tabs.tabs--break-for-small {
     @media screen and #{breakpoint(small only)} {
         display: none;
 
@@ -17,18 +17,9 @@ ul.tabs.tabs-break-for-small {
     }
 }
 
-.tabs {
-    margin-bottom: 1em;
-
-    +div.tabs-content {
-        border: none;
-        margin-bottom: 1em;
-    }
-}
-
 .tabs-plain {
     border: none;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
 
     li {
         &.is-active {
@@ -41,6 +32,7 @@ ul.tabs.tabs-break-for-small {
 
     +div.tabs-content {
         border: none;
+        margin-bottom: 1em;
     }
 }
 
@@ -48,7 +40,7 @@ ul.tabs.tabs-break-for-small {
     border: none;
     border-bottom: 3px solid $medium-gray;
     background: $light-gray;
-    margin-bottom: 1em;
+    // margin-bottom: 0;
 
     li {
         &.is-active {
@@ -61,6 +53,7 @@ ul.tabs.tabs-break-for-small {
     +div.tabs-content {
         background: $light-gray;
         border: none;
+        margin-bottom: 1em;
 
         dd {
             border-bottom: 2px solid $medium-gray;
@@ -70,7 +63,7 @@ ul.tabs.tabs-break-for-small {
 
 .tabs-bold {
     border: none;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
 
     li {
         // width: 50%;
@@ -95,6 +88,7 @@ ul.tabs.tabs-break-for-small {
 
     +div.tabs-content {
         border: none;
+        margin-bottom: 1em;
     }
 }
 .tabs-bold-3 {
@@ -157,7 +151,8 @@ ul.tabs.tabs-break-for-small {
 
 
 .wrapper-row {
-	padding: 2em;
+	padding: 2em 0;
+    margin-bottom: 2em;
 
 	&.wrapper-row--shaded {
 		background: #eee;
@@ -167,40 +162,40 @@ ul.tabs.tabs-break-for-small {
 	}
 }
 
-/* Sections with images */
-
-.section-image-right {
-    padding-right: 0;
-
-    img {
-        height: auto;
-        float: right;
-        padding-left: $tab-content-padding;
-    }
-}
-
-.section-image-left {
-    padding-left: 0;
-
-    img {
-        height: auto;
-        float: left;
-        padding-right: $tab-content-padding;
-    }
-}
-
-.section-image-4 {
-    // @extend .section-image-right;
-
-    img {
-        width: 33%;
-    }
-}
-
-.section-image-6 {
-    // @extend .section-image-right;
-
-    img {
-        width: 50%;
-    }
-}
+// /* Sections with images */
+//
+// .section-image-right {
+//     padding-right: 0;
+//
+//     img {
+//         height: auto;
+//         float: right;
+//         padding-left: $tab-content-padding;
+//     }
+// }
+//
+// .section-image-left {
+//     padding-left: 0;
+//
+//     img {
+//         height: auto;
+//         float: left;
+//         padding-right: $tab-content-padding;
+//     }
+// }
+//
+// .section-image-4 {
+//     // @extend .section-image-right;
+//
+//     img {
+//         width: 33%;
+//     }
+// }
+//
+// .section-image-6 {
+//     // @extend .section-image-right;
+//
+//     img {
+//         width: 50%;
+//     }
+// }

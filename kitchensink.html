@@ -6,52 +6,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="google-site-verification" content="hIahgI8cltjkZ_8UcNp8vY5JO3ZKV3QxDcSzEy59HD0" />
         <!-- meta -->
-
         <title>Kitchen sink – University of Stirling</title>
-
         <link rel="stylesheet" href="dist/css/app.css" />
-
         <style>
-        body {
-            background: #eee;
-        }
-
-        hr {
+            hr {
             margin-top: 1em;
             margin-bottom: 1em;
-        }
-
-        pre {
+            }
+            pre {
             background: #eee;
             border: 1px solid #999;
             padding: 20px;
             margin-bottom: 1em;
-        }
+            }
         </style>
     </head>
     <body>
         <div class="row">
-            <div class="small-12 medium-12 columns" style="background: white;">
+            <div class="small-12 medium-12 columns">
                 <h1>Kitchen sink</h1>
 
                 <p>Kitchen sink of re-usable components for Stirling Uni website. If a component seems like it might be useful for other
-                pages of the website, drop it in here for all to see.</p>
+                    pages of the website, drop it in here for all to see.
+                </p>
 
-                <p>Try to keep components styling to a minimum so that they can be modified where needed (rather than having to strip border
-                radius etc)</p>
-
-                <h2>Tab styles</h2>
-
+                <h2>Tabs</h2>
                 <p>Check oot our delightful tabs on offer</p>
-
                 <h3>Plain</h3>
-
                 <ul class="tabs tabs-plain" data-tabs id="example-tabs-plain">
                     <li class="tabs-title is-active"><a href="#example-plain-tab1" aria-selected="true">Overview</a></li>
                     <li class="tabs-title"><a href="#example-plain-tab2">Entry Requirements</a></li>
                     <li class="tabs-title"><a href="#example-plain-tab3">Course Details</a></li>
                 </ul>
-
                 <div class="tabs-content course-top-level-tabs-content" data-tabs-content="example-tabs-plain">
                     <div class="tabs-panel is-active" id="example-plain-tab1">
                         Tab 1
@@ -63,15 +49,12 @@
                         Tab 3
                     </div>
                 </div>
-
                 <h3>Flat</h3>
-
                 <ul class="tabs tabs-flat" data-tabs id="example-tabs">
                     <li class="tabs-title is-active"><a href="#tab1" aria-selected="true">Overview</a></li>
                     <li class="tabs-title"><a href="#tab2">Entry Requirements</a></li>
                     <li class="tabs-title"><a href="#tab3">Course Details</a></li>
                 </ul>
-
                 <div class="tabs-content course-top-level-tabs-content" data-tabs-content="example-tabs">
                     <div class="tabs-panel is-active" id="tab1">
                         Tab 1
@@ -83,15 +66,12 @@
                         Tab 3
                     </div>
                 </div>
-
                 <h3>Bold Primary 4</h3>
-
                 <ul class="tabs tabs-bold tabs-bold-4" data-tabs id="example-tabs-bold-4">
                     <li class="tabs-title is-active"><a href="#example-tabs-bold-4-tab1" aria-selected="true">Tab 1</a></li>
                     <li class="tabs-title"><a href="#example-tabs-bold-4-tab2">Tab 2</a></li>
                     <li class="tabs-title"><a href="#example-tabs-bold-4-tab3">Tab 3</a></li>
                 </ul>
-
                 <div class="tabs-content course-top-level-tabs-content" data-tabs-content="example-tabs-bold-4">
                     <div class="tabs-panel is-active" id="example-tabs-bold-4-tab1">
                         Tab 1
@@ -103,14 +83,11 @@
                         Tab 3
                     </div>
                 </div>
-
                 <h3>Bold Primary 6</h3>
-
                 <ul class="tabs tabs-bold tabs-bold-6" data-tabs id="example-tabs-bold-6">
                     <li class="tabs-title is-active"><a href="#example-tabs-bold-6-tab1" aria-selected="true">Overview</a></li>
                     <li class="tabs-title"><a href="#example-tabs-bold-6-tab2">Entry Requirements</a></li>
                 </ul>
-
                 <div class="tabs-content course-top-level-tabs-content" data-tabs-content="example-tabs-bold-6">
                     <div class="tabs-panel is-active" id="example-tabs-bold-6-tab1">
                         Tab 1
@@ -119,24 +96,19 @@
                         Tab 2
                     </div>
                 </div>
-
                 <h3>Break tabs for small devices</h3>
-
-                <pre>&#x3C;ul class=&#x22;tabs tabs-break-for-small&#x22; data-tabs id=&#x22;example-tabs-bold-6&#x22;&#x3E;
+                <pre>&#x3C;ul class=&#x22;tabs <strong>tabs--break-for-small</strong>&#x22; data-tabs id=&#x22;example-tabs-bold-6&#x22;&#x3E;
     &#x3C;li class=&#x22;tabs-title is-active&#x22;&#x3E;...
 &#x3C;/ul&#x3E;
 
 &#x3C;div class=&#x22;tabs-content course-top-level-tabs-content&#x22; data-tabs-content=&#x22;example-tabs-bold-6&#x22;&#x3E;
     &#x3C;div class=&#x22;tabs-panel is-active&#x22; id=&#x22;example-tabs-bold-6-tab1&#x22;&#x3E;
         ...</pre>
-
                 <h2>Title block</h2>
-
                 <pre>&#x3C;figure class=&#x22;title-block&#x22;&#x3E;
     &#x3C;img src=&#x22;http://placehold.it/250x150&#x22; alt=&#x22;some text&#x22;&#x3E;
     &#x3C;figcaption class=&#x22;title-block__title&#x22;&#x3E;Spotlight Item #1&#x3C;/figcaption&#x3E;
 &#x3C;/figure&#x3E;</pre>
-
                 <div class="row">
                     <div class="columns large-4 medium-6 small-12 column-block">
                         <figure class="title-block">
@@ -157,15 +129,12 @@
                         </figure>
                     </div>
                 </div>
-
                 <h3>Overlay mode</h3>
-
                 <p>Useful if we want the bottom of the blocks to align. This will position the title
-                element above the block.</p>
-
-                <pre>&#x3C;figure class=&#x22;title-block title-block--overlay&#x22;&#x3E;
+                    element above the block.
+                </p>
+                <pre>&#x3C;figure class=&#x22;title-block <strong>title-block--overlay</strong>&#x22;&#x3E;
     ...</pre>
-
                 <div class="row">
                     <div class="columns large-4 medium-6 small-12 column-block">
                         <figure class="title-block title-block--overlay">
@@ -186,67 +155,56 @@
                         </figure>
                     </div>
                 </div>
-
                 <hr>
-
-                <h2>Section Images</h2>
-
-                <p>Will align an image flush to the right/left of a column</p>
-
-                <h3>Right aligned</h3>
-
-                <div class="row">
-                    <div class="small-12 medium-12 columns section-image section-image-right section-image-4">
-                        <img data-interchange="[http://placehold.it/350x250, small], [http://placehold.it/350x250, medium], [ http://placehold.it/350x250, large]">
-                        <p>The Bachelor of Accountancy (BAcc) course is designed to help propel your career in accountancy or the wider financial sector. The programme allows you to gain significant examination exemptions from professional bodies, meaning you can progress quickly with external qualifications after graduation. The BAcc Degrees (single and joint) are accredited by leading professional bodies including: the Association of Chartered Certified Accountants (ACCA); the Chartered Institute of Management Accountants (CIMA); the Chartered Institute of Public Finance and Accountancy (CIPFA); and the Institute of Chartered Accountants in Scotland (ICAS).</p>
-                    </div>
-                </div>
-
-                <h3>Left aligned</h3>
-
-                <div class="row">
-                    <div class="small-12 medium-12 columns section-image section-image-left section-image-4">
-                        <img data-interchange="[http://placehold.it/350x250, small], [http://placehold.it/350x250, medium], [ http://placehold.it/350x250, large]">
-                        <p>The Bachelor of Accountancy (BAcc) course is designed to help propel your career in accountancy or the wider financial sector. The programme allows you to gain significant examination exemptions from professional bodies, meaning you can progress quickly with external qualifications after graduation. The BAcc Degrees (single and joint) are accredited by leading professional bodies including: the Association of Chartered Certified Accountants (ACCA); the Chartered Institute of Management Accountants (CIMA); the Chartered Institute of Public Finance and Accountancy (CIPFA); and the Institute of Chartered Accountants in Scotland (ICAS).</p>
-                    </div>
-                </div>
-
-                <hr>
-
                 <h2>Shaded row</h2>
-
                 <p>Used to break sections up with coloured backgrounds</p>
 
-                <div class="row row-shaded">
-                    <div class="small-12 medium-12 columns section-coloured">
-                        <h3>Faculty Profile</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </div>
+                <pre>&#x3C;div class=&#x22;wrapper-row wrapper-row--shaded&#x22;&#x3E;
+    &#x3C;div class=&#x22;row&#x22;&#x3E;
+        &#x3C;div class=&#x22;small-12 medium-12 columns section-coloured&#x22;&#x3E;
+            ...
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row&#x22;&#x3E;
+    &#x3C;div class=&#x22;small-12 medium-12 columns&#x22;&#x3E;
+        ...
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+            </div>
+        </div>
+
+        <div class="wrapper-row wrapper-row--shaded">
+            <div class="row">
+                <div class="small-12 medium-12 columns section-coloured">
+                    <h3>Faculty Profile</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
+            </div>
+        </div>
 
-                <div class="row row-shaded">
-                    <div class="small-12 medium-12 columns">
-                        <h3>Insights into Your Future Career</h3>
+        <div class="row">
+            <div class="small-12 medium-12 columns">
+                <h3>Insights into Your Future Career</h3>
+                <p>Internship opportunities will help you forge the best start to your career when you graduate. Benefit from practical experience in the accountancy industry and boost your CV. Real-world industry experience enables you to put theory into practice and test your future choice of profession. Our Careers and Development Centre can help you find an internship or work placement. </p>
+                <p>Every year, students have the opportunity to hear from people at the forefront of the accountancy industry. This includes the professional bodies that accredit the BAcc degree, including the Institute of Chartered Accountants of Scotland (ICAS), the Chartered Institute of Management Accountants (CIMA) and the Association of Chartered Certified Accountants (ACCA).</p>
+            </div>
+        </div>
 
-                        <p>Internship opportunities will help you forge the best start to your career when you graduate. Benefit from practical experience in the accountancy industry and boost your CV. Real-world industry experience enables you to put theory into practice and test your future choice of profession. Our Careers and Development Centre can help you find an internship or work placement. </p>
-                        <p>Every year, students have the opportunity to hear from people at the forefront of the accountancy industry. This includes the professional bodies that accredit the BAcc degree, including the Institute of Chartered Accountants of Scotland (ICAS), the Chartered Institute of Management Accountants (CIMA) and the Association of Chartered Certified Accountants (ACCA).</p>
-                    </div>
+        <div class="wrapper-row wrapper-row--shaded">
+            <div class="row">
+                <div class="small-12 medium-12 columns section-coloured get-in-touch">
+                    <h3>Get in Touch</h3>
+                    <table>
+                        <tr>
+                            <th>Phone</th>
+                            <td>01234 567890</td>
+                            <th>Email</th>
+                            <td>jim.slim@stir.ac.uk</td>
+                        </tr>
+                    </table>
                 </div>
-
-                <div class="row">
-                    <div class="small-12 medium-12 columns section-coloured get-in-touch">
-                        <h3>Get in Touch</h3>
-                        <table>
-                            <tr>
-                                <th>Phone</th>
-                                <td>01234 567890</td>
-                                <th>Email</th>
-                                <td>jim.slim@stir.ac.uk</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-
             </div>
         </div>
 
