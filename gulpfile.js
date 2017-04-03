@@ -72,7 +72,8 @@ gulp.task('js', function() {
         'bower_components/slick-carousel/slick/slick.js',
         //...
         'src/js/app.js',
-        'src/js/courses.js'
+        'src/js/courses.js',
+        'src/js/faculties.js'
     ];
 
     return gulp.src(scripts)
