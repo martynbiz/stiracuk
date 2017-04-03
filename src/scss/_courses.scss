@@ -2,188 +2,24 @@
 
 .course-wrapper {
 
-    .dtp-todo {
-        background: #ffc;
-    }
-
-    .course-header {
-        margin-bottom: 1em;
-
-        .course-title {
-            dl {
-                float:left;
-                width:100%;
-                font-size: 90%;
-            }
-            dt,
-            dd {
-                float:left;
-                margin:0;
-                padding:0;
-            }
-            dt {
-                padding-right:0.5em;
-                display: none;
-            }
-            dd {
-                margin-right: 20px;
-            }
-        }
-
-        .course-links {
-            ul {
-                padding: 0;
-                margin: 0;
-                list-style: none;
-                text-align: right;
-            }
-        }
-    }
-
-    ul.tabs + div.tabs-content {
+    .row {
         margin-bottom: 1em;
     }
 
-    // // overview, entry requirements, ...
-    // ul#course-tabs {
-    //     @extend ul.tabs.tabs-plain;
-    // }
-
-    // // uk students / international
-    // ul#course-entryreq-tabs {
-    //     @extend ul.tabs.tabs-bold-6;
-    // }
-    //
-    // // 2017 entry / 2018 entry
-    // ul#course-entryreq-ukstudents-tabs,
-    // ul#course-entryreq-international-tabs,
-    // ul#course-fees-tabs {
-    //     @extend ul.tabs.tabs-flat;
-    // }
+    .course-links {
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            text-align: right;
+        }
+    }
 
     // year1, year2, ...
     ul#course-modules-tabs {
-        // @extend ul.tabs.tabs-bold-3;
 
         +div.tabs-content {
             background: $light-gray;
-
-            table {
-                border-spacing: 0;
-                text-align: left;
-
-                tbody {
-                    border: none;
-                }
-
-                th {
-                    border-bottom: 2px solid $medium-gray;
-                    background: $light-gray;
-                }
-
-                td {
-                    border-bottom: 1px solid $medium-gray;
-                    background: $light-gray;
-                }
-            }
-        }
-    }
-
-    .tabs-content {
-        border: none;
-
-        .row {
-            margin-bottom: 2em;
-        }
-
-        // .course-intro {
-        //     margin-bottom: 1em;
-        //     font-size: 150%;
-        // }
-        //
-        // .course-full-intro {
-        //     background: $light-gray;
-        //     margin-bottom: 1em;
-        //
-        //     .right {
-        //         margin: 0;
-        //         padding: 0;
-        //
-        //         img {
-        //             width: 100%;
-        //             height: auto;
-        //         }
-        //     }
-        // }
-
-        .course-facilities-carousel {
-            margin-bottom: 1em;
-        }
-
-        // table.english-language-requirements {
-        //     // @extend .text-left;
-        //     border-spacing: 0;
-        //
-        //     tr,
-        //     td {
-        //         background: $light-gray;
-        //         border: none;
-        //     }
-        //
-        //     th {
-        //         font-weight: normal;
-        //     }
-        //
-        //     th,
-        //     td {
-        //         border-bottom: 2px solid $medium-gray;
-        //     }
-        //
-        //     tr:first-child {
-        //         th,
-        //         td {
-        //             font-weight: bold !important;
-        //         }
-        //     }
-        // }
-
-        // table.flexible-degree {
-        //     td {
-        //         text-align: center;
-        //
-        //     }
-        // }
-
-        // .get-in-touch {
-        //     table {
-        //         border-spacing: 0;
-        //         tbody {
-        //             background: $light-gray;
-        //         }
-        //     }
-        // }
-
-        // carousel
-        .slick-slide {
-            opacity: 0.4;
-
-            img {
-                display: inline-block;
-            }
-
-            // iframe {
-            //     max-width: 450px;
-            // }
-        }
-
-        .slick-active {
-            opacity: 1;
-        }
-
-        .slick-prev:before,
-        .slick-next:before
-        {
-            color: black;
         }
     }
 }

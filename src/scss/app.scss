@@ -207,6 +207,29 @@ details > div h3{
 }
 
 
+/* Carousel */
+
+// TODO move to app.scss?
+// carousel
+.slick-slide {
+	opacity: 0.4;
+
+	img {
+		display: inline-block;
+	}
+}
+
+.slick-active {
+	opacity: 1;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+	color: black;
+}
+
+
 // re-usable components that can be used site wide
 @import 'kitchensink';
 

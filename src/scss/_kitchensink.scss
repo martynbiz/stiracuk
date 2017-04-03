@@ -18,13 +18,17 @@ ul.tabs.tabs-break-for-small {
 }
 
 .tabs {
+    margin-bottom: 1em;
+
     +div.tabs-content {
+        border: none;
         margin-bottom: 1em;
     }
 }
 
 .tabs-plain {
     border: none;
+    margin-bottom: 1em;
 
     li {
         &.is-active {
@@ -44,6 +48,7 @@ ul.tabs.tabs-break-for-small {
     border: none;
     border-bottom: 3px solid $medium-gray;
     background: $light-gray;
+    margin-bottom: 1em;
 
     li {
         &.is-active {
@@ -55,6 +60,7 @@ ul.tabs.tabs-break-for-small {
 
     +div.tabs-content {
         background: $light-gray;
+        border: none;
 
         dd {
             border-bottom: 2px solid $medium-gray;
@@ -64,6 +70,7 @@ ul.tabs.tabs-break-for-small {
 
 .tabs-bold {
     border: none;
+    margin-bottom: 1em;
 
     li {
         // width: 50%;
@@ -84,6 +91,10 @@ ul.tabs.tabs-break-for-small {
                 font-weight: bold;
             }
         }
+    }
+
+    +div.tabs-content {
+        border: none;
     }
 }
 .tabs-bold-3 {
