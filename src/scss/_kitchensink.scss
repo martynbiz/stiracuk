@@ -116,31 +116,55 @@ ul.tabs.tabs-break-for-small {
 
 /* Figure blocks */
 
-.figure-block {
+.title-block {
     // @extend .columns;
-    float: left !important;
+    // float: left !important;
     margin-bottom: 1em;
+    position: relative;
 
     img {
         width: 100%;
         height: auto;
     }
 
-    figcaption {
+    .title-block__title {
         text-align: center;
         display: block;
         padding: 10px;
         background: $primary-color;
         color: $white;
     }
+
+    &.title-block--overlay {
+        figcaption {
+            bottom: 0;
+        	width: 100%;
+        	position: absolute;
+        }
+    }
 }
 
-/* Shaded rows */
 
-// e.g. gray section
-// .section-coloured {
-.row-shaded {
-    background-color: $light-gray;
+
+/* Wrapper rows */
+
+// // e.g. gray section
+// // .section-coloured {
+// .row-shaded {
+//     background-color: $light-gray;
+// }
+
+
+
+.wrapper-row {
+	padding: 2em;
+
+	&.wrapper-row--shaded {
+		background: #eee;
+	}
+	&.wrapper-row--no-padding{
+		padding: 0em;
+	}
 }
 
 /* Sections with images */
