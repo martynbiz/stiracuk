@@ -7,7 +7,7 @@
         <meta name="google-site-verification" content="hIahgI8cltjkZ_8UcNp8vY5JO3ZKV3QxDcSzEy59HD0" />
         <!-- meta -->
 
-        <title>Courses – University of Stirling</title>
+        <title>Kitchen sink – University of Stirling</title>
 
         <link rel="stylesheet" href="dist/css/app.css" />
 
@@ -130,82 +130,62 @@
     &#x3C;div class=&#x22;tabs-panel is-active&#x22; id=&#x22;example-tabs-bold-6-tab1&#x22;&#x3E;
         ...</pre>
 
-                <h2>Figure block</h2>
+                <h2>Title block</h2>
 
-                <h3>2 block row</h3>
+                <pre>&#x3C;figure class=&#x22;title-block&#x22;&#x3E;
+    &#x3C;img src=&#x22;http://placehold.it/250x150&#x22; alt=&#x22;some text&#x22;&#x3E;
+    &#x3C;figcaption class=&#x22;title-block__title&#x22;&#x3E;Spotlight Item #1&#x3C;/figcaption&#x3E;
+&#x3C;/figure&#x3E;</pre>
 
                 <div class="row">
-                    <figure class="columns small-12 medium-6 figure-block">
-                        <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                        <figcaption>Course 1</figcaption>
-                    </figure>
-
-                    <figure class="columns small-12 medium-6 figure-block">
-                        <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                        <figcaption>Course 2</figcaption>
-                    </figure>
+                    <div class="columns large-4 medium-6 small-12 column-block">
+                        <figure class="title-block">
+                            <img src="http://placehold.it/250x150" alt="some text">
+                            <figcaption class="title-block__title">Spotlight Item #1</figcaption>
+                        </figure>
+                    </div>
+                    <div class="columns large-4 medium-6 small-12 column-block">
+                        <figure class="title-block">
+                            <img src="http://placehold.it/250x150" alt="some text">
+                            <figcaption class="title-block__title">Spotlight Item #2</figcaption>
+                        </figure>
+                    </div>
+                    <div class="columns large-4 medium-6 small-12 column-block">
+                        <figure class="title-block">
+                            <img src="http://placehold.it/250x150" alt="some text">
+                            <figcaption class="title-block__title">Spotlight Item #2</figcaption>
+                        </figure>
+                    </div>
                 </div>
 
-                <h3>3 block row</h3>
+                <h3>Overlay mode</h3>
 
-                                <div class="row">
-                <figure class="columns small-12 medium-4 figure-block">
-                    <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                    <figcaption>Course 1</figcaption>
-                </figure>
+                <p>Useful if we want the bottom of the blocks to align. This will position the title
+                element above the block.</p>
 
-                <figure class="columns small-12 medium-4 figure-block">
-                    <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                    <figcaption>Course 2</figcaption>
-                </figure>
+                <pre>&#x3C;figure class=&#x22;title-block title-block--overlay&#x22;&#x3E;
+    ...</pre>
 
-                <figure class="columns small-12 medium-4 figure-block">
-                    <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                    <figcaption>Course 3</figcaption>
-                </figure>
-            </div>
-
-                <h3>4 block row</h3>
-
-                                <div class="row">
-                <figure class="columns small-12 medium-3 figure-block">
-                    <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                    <figcaption>Course 1</figcaption>
-                </figure>
-
-                <figure class="columns small-12 medium-3 figure-block">
-                    <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                    <figcaption>Course 2</figcaption>
-                </figure>
-
-                <figure class="columns small-12 medium-3 figure-block">
-                    <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                    <figcaption>Course 3</figcaption>
-                </figure>
-
-                <figure class="columns small-12 medium-3 figure-block">
-                    <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                    <figcaption>Course 4</figcaption>
-                </figure>
-            </div>
-
-                <h3>As links</h3>
-
-                                <div class="row">
-                <a href="#" class="columns small-12 medium-6 figure-block">
-                    <figure>
-                        <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                        <figcaption>Course 1</figcaption>
-                    </figure>
-                </a>
-
-                <a href="#" class="columns small-12 medium-6 figure-block">
-                    <figure>
-                        <img data-interchange="[http://placehold.it/350x150, small], [http://placehold.it/350x150, medium], [ http://placehold.it/350x150, large]" alt="some text">
-                        <figcaption>Course 2</figcaption>
-                    </figure>
-                </a>
-            </div>
+                <div class="row">
+                    <div class="columns large-4 medium-6 small-12 column-block">
+                        <figure class="title-block title-block--overlay">
+                            <img src="http://placehold.it/250x150" alt="some text">
+                            <figcaption class="title-block__title">Short title</figcaption>
+                        </figure>
+                    </div>
+                    <div class="columns large-4 medium-6 small-12 column-block">
+                        <figure class="title-block title-block--overlay">
+                            <img src="http://placehold.it/250x150" alt="some text">
+                            <figcaption class="title-block__title">Somewhat medium title</figcaption>
+                        </figure>
+                    </div>
+                    <div class="columns large-4 medium-6 small-12 column-block">
+                        <figure class="title-block title-block--overlay">
+                            <img src="http://placehold.it/250x150" alt="some text">
+                            <figcaption class="title-block__title">An very long winded title that takes up too much precious space</figcaption>
+                        </figure>
+                    </div>
+                </div>
 
                 <hr>
 
