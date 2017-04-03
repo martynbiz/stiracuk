@@ -8,6 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var gulpif = require('gulp-if');
 var minimist = require('minimist');
 var browserSync = require('browser-sync').create();
+var banner = require('gulp-banner');
 
 // get parameters from cli
 // @see http://gulpjs.org/recipes/pass-arguments-from-cli.html
@@ -28,10 +29,13 @@ gulp.task('sass', function () {
         'src/scss'
     ];
 
+    var comment = '/*\n THIS IS A GENERATED FILE, please edit and compile ./src/scss/*.scss files.\n*/\n\n';
+
     return gulp.src('src/scss/app.scss')
         .pipe(gulpif(options.env !== 'production', sourcemaps.init()))
         .pipe(sass({includePaths: sassPaths}))
         .pipe(gulpif(options.env !== 'production', sourcemaps.write()))
+        .pipe(banner(comment))
         .pipe(gulp.dest('src/css'));
 });
 

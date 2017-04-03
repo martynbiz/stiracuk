@@ -1,11 +1,11 @@
-# Foundation for Sites Template
+# Foundation 6 project for DTP
 
 ## Manual Setup
 
 To manually set up the project, first clone it with Git:
 
 ```bash
-git clone https://[user]@gitlab.com/stiracuk/f6dtp.git projectname
+git clone https://[user]@gitlab.com/stiracuk/f6dtp.git
 ```
 
 Then open the folder in your command line, and install the required dependencies:
