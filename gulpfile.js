@@ -55,7 +55,7 @@ gulp.task('css', function() {
 
     return gulp.src(scripts)
         .pipe(concatCss('app.css'))
-        .pipe(gulpif(options.env === 'production', cleanCSS({compatibility: 'ie8'})))
+        // .pipe(gulpif(options.env === 'production', cleanCSS({compatibility: 'ie8'})))
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 });

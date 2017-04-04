@@ -2,32 +2,15 @@
 
 .course-wrapper {
 
-    .tabs-content-courses {
+    // Move to kitchen sink?
+    .tabs-content--no-padding {
         >.tabs-panel {
             padding: 0;
         }
     }
 
-    .tabs {
-        // margin-bottom: 1em;
-
-        +div.tabs-content {
-            border: none;
-            margin-bottom: 1em;
-        }
-    }
-
     .row {
         margin-bottom: 1em;
-    }
-
-    .course-links {
-        ul {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            text-align: right;
-        }
     }
 
     // year1, year2, ...

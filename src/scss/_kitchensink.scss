@@ -2,21 +2,6 @@
 
 /* Tabs */
 
-// this will break tabs on small devices
-ul.tabs.tabs--break-for-small {
-    @media screen and #{breakpoint(small only)} {
-        display: none;
-
-        +div.tabs-content {
-            border: none;
-
-            .tabs-panel {
-                display: block;
-            }
-        }
-    }
-}
-
 .tabs-plain {
     border: none;
     // margin-bottom: 1em;
@@ -107,6 +92,27 @@ ul.tabs.tabs--break-for-small {
     }
 }
 
+// this will break tabs on small devices
+.tabs--break-for-small {
+    @media screen and #{breakpoint(small only)} {
+        display: none;
+
+        +div.tabs-content {
+            border: none;
+
+            .tabs-panel {
+                display: block;
+            }
+        }
+    }
+}
+
+.tabs-content--no-padding {
+    >.tabs-panel {
+        padding: 0;
+    }
+}
+
 
 /* Figure blocks */
 
@@ -160,6 +166,24 @@ ul.tabs.tabs--break-for-small {
 	&.wrapper-row--no-padding{
 		padding: 0em;
 	}
+    &.wrapper-row--image-right {
+        img {
+            float: right;
+            margin-left: 1em;
+        }
+        p {
+            margin: 1em 0;
+        }
+    }
+    &.wrapper-row--image-left {
+        img {
+            float: left;
+            margin-right: 1em;
+        }
+        p {
+            margin: 1em 0;
+        }
+    }
 }
 
 // /* Sections with images */
